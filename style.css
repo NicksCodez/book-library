@@ -207,19 +207,28 @@ button {
     flex: 1;
 }
 
-.book-read {
+.book-read, 
+.book-unread {
     flex: 1;
     display: flex;
     align-self: stretch;
 }
 
 .book-read > button {
-    background-color: inherit;
     border: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     font-size: 15px;
     background-color: #bef264;
+    flex: 1;
+}
+
+.book-unread > button {
+    border: 1px solid var(--header-background-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 15px;
+    background-color: inherit;
     flex: 1;
 }
 

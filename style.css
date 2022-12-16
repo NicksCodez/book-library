@@ -27,6 +27,9 @@ body {
     transition: top 0ms ease-in-out 200ms,
                 opacity 200ms ease-in-out 0ms,
                 transform 200ms ease-in-out 0ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #form.active {

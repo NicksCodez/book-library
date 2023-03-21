@@ -115,14 +115,108 @@ clearForm();
 });
 
 submitForm.addEventListener("click", (event) => {
-  event.preventDefault();
-  addBookToLibrary();
-  drawBook(myLibrary[myLibrary.length-1]);
-  makeButtonsWork();
-  clearForm();
-  pressCloseForm();
+  // event.preventDefault();
+  newBookTitle.setCustomValidity('');
+  const titleValid = newBookTitle.checkValidity();
+  newBookAuthor.setCustomValidity('');
+  const authorValid = newBookAuthor.checkValidity();
+  newBookPages.setCustomValidity('');
+  const pagesValid = newBookPages.checkValidity();
+
+  if(titleValid && authorValid && pagesValid){
+    addBookToLibrary();
+    drawBook(myLibrary[myLibrary.length-1]);
+    makeButtonsWork();
+    clearForm();
+    pressCloseForm();
+  }
+  
 });
+
+// newBookTitle.addEventListener()
 
 makeButtonsWork();
 
-  
+  newBookTitle.addEventListener('change', () => {
+    newBookTitle.setCustomValidity('');
+  const titleValid = newBookTitle.checkValidity();
+  const span = newBookTitle.closest('div').querySelector('.errorMsg');
+  if(!titleValid){
+    span.textContent = 'Title cannot be empty';
+  } else {
+    span.textContent = '';
+   
+  }
+  })
+
+  newBookTitle.addEventListener('click', () => {
+    newBookTitle.setCustomValidity('');
+  const titleValid = newBookTitle.checkValidity();
+  const span = newBookTitle.closest('div').querySelector('.errorMsg');
+  if(!titleValid){
+    span.textContent = 'Title cannot be empty';
+  } else {
+    span.textContent = '';
+   
+  }
+  })
+
+  newBookAuthor.addEventListener('change', () => {
+    newBookAuthor.setCustomValidity('');
+  const titleValid = newBookAuthor.checkValidity();
+  const span = newBookAuthor.closest('div').querySelector('.errorMsg');
+  if(!titleValid){
+    span.textContent = 'Author cannot be empty';
+  } else {
+    span.textContent = '';
+   
+  }
+  })
+
+  newBookAuthor.addEventListener('click', () => {
+    newBookAuthor.setCustomValidity('');
+  const titleValid = newBookAuthor.checkValidity();
+  const span = newBookAuthor.closest('div').querySelector('.errorMsg');
+  if(!titleValid){
+    span.textContent = 'Author cannot be empty';
+  } else {
+    span.textContent = '';
+   
+  }
+  })
+
+  newBookPages.addEventListener('change', () => {
+    newBookPages.setCustomValidity('');
+  const titleValid = newBookPages.checkValidity();
+  const span = newBookPages.closest('div').querySelector('.errorMsg');
+  if(!titleValid){
+    span.textContent = 'Pages must be between 1 and 3 numbers';
+  } else {
+    span.textContent = '';
+   
+  }
+  })
+
+  newBookPages.addEventListener('click', () => {
+    newBookPages.setCustomValidity('');
+  const titleValid = newBookPages.checkValidity();
+  const span = newBookPages.closest('div').querySelector('.errorMsg');
+  if(!titleValid){
+    span.textContent = 'Pages must be between 1 and 3 numbers';
+  } else {
+    span.textContent = '';
+   
+  }
+  })
+
+  newBookPages.addEventListener('input', () => {
+    newBookPages.setCustomValidity('');
+  const titleValid = newBookPages.checkValidity();
+  const span = newBookPages.closest('div').querySelector('.errorMsg');
+  if(!titleValid){
+    span.textContent = 'Pages must be between 1 and 3 numbers';
+  } else {
+    span.textContent = '';
+   
+  }
+  })

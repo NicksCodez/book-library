@@ -14,18 +14,24 @@
                 <legend>Add a book</legend>
                 <div>
                     <label for="title">Title</label>
-                    <input type="text" id="title" name="title">
+                    <input type="text" id="title" name="title" required>
+                    <span class="errorMsg"></span>
                 </div>
+                
                 <div>
                     <label for="author">Author</label>
-                    <input type="text" id="author" name="author">
+                    <input type="text" id="author" name="author" required>
+                    <span class="errorMsg"></span>
                 </div>
+                
                 <div>
                     <label for="pages">Pages</label>
-                    <input type="tel" id="pages" name="pages" pattern="\d{1,3}">
+                    <input type="tel" id="pages" name="pages" pattern="\d{1,3}" required>
+                    <span class="errorMsg"></span>
                 </div>
+                
                 <div class="selection">
-                    <label for="read">Have you already read this book?</label>
+                    <label for="read"> read this book?</label>
                     <input type="checkbox" id="read" name="read">
                 </div>
                 <div class="form-buttons">
